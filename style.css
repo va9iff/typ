@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: nunito;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#main{
+    background-color: coral;
+}
+
+.fullpage{
+    width: 100%;
+    height: 100vh;
+}
+
+#success{
+    background-color: rgb(26, 25, 49);
+    position: relative;
+}
+
+.videoWrapper {
+    overflow: hidden;
+}
+#bgVid {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; /* 100 * 16 / 9 */
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.successHeader {
+    /* background-color: rgb(60, 60, 146); */
+    position: relative;
+    background-color: #00304A;
+    height: 90px;
+}
+
+.successHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.successHeader>.sep {
+    height: 80%;
+    border-radius: 8px;
+    margin: 0 8px;
+    width: 3px;
+/*    background-color: #61b2dd;*/
+    background: linear-gradient(20deg, #1080EF, #BA2FC6);
+    filter: hue-rotate(-50deg);
+
+    transition: 200ms;
+}
+
+.successHeader:hover>.sep {
+/*    width: 9px;*/
+    height: 40%;
+    transform: rotate(20deg);
+    margin-left: 25px;
+    filter: hue-rotate(0);
+/*    margin-right: 15px;*/
+}
+
+/*.successHeader>*/.unecLogo,
+.successHeader>.azLogo 
+{
+    height: 80%;
+}
+
+.typ {
+    font-size: 27px;
+    color: #b7ddf1;
+    transition: 200ms;
+}
+.typ:hover {
+    color: #eee;
+    filter: drop-shadow(0 0 5px #0ff);
+}
+
+#success > .shadyText{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+/*    padding: 0 260px;*/
+/*    padding-bottom: 50px;*/
+/*    padding-top: 200px;*/
+    color: #eee;
+    animation: shadyTextAnim 4000ms;
+}
+
+#success > .shade{
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0, #000000dd, #00000000);
+    width: 100%;
+    height: 50%;
+    animation: succesShade 4000ms;
+    transform: translateY(100%);    
+/*    animation-delay: 800ms;*/
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes succesShade {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes shadyTextAnim {
+    0%{
+        transform: translateY(50%) scale(0.7);
+        letter-spacing: -6px;
+    }
+    70%{
+        transform: translateY(0) scale(1.0);
+    }
+    100%{
+        letter-spacing: normal;
+    }
+}
+
+#success {
+    overflow: hidden;
+}
+
+#enterButton {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    padding: 24px 48px;
+    border-radius: 13px;
+    background-color: #d6ffff;
+    transition: 200ms;
+    border: none;
+    transform: scale(1.0);
+}
+#enterButton:hover {
+/*    border-width: 8px;*/
+    transform: translateX(10px);
+    box-shadow: 0 0 0 4px #1d3557;
+    background-color: #f1faee;
+}
+
+#enterButton:active {
+    transform: translateX(-10px);
+}
+
+#designBy {
+    bottom: 0;
+    position: absolute;
+    color: #eeee;
+    font-size: 13px;
+}
+
+.azText, .unecText {
+    color: #ddd;
+    position: relative;
+    padding-right: 15px;
+
+}
+
+.azLogo {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.unecText {
+    margin-left: 25px;
+}
+
+.highLight {
+    position: absolute;
+/*    background-color: #ee6c4d;*/
+    background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+opacity: 0.8;
+/*transform: scaleY(0.7);*/
+
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: 200ms;
+    transition-timing-function: ease-in;
+}
+
+.shadyText:hover .highLight {
+    width: 100%;
+}
+
+.shadyText > span {
+    position: relative;
+}
+
+
+/* - - - - - - - - -  */
+
+.logoWrapper {
+    display: flex;
+    flex-direction: row;
+/*    background-color: #f333;*/
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+/*    position: absolute;*/
+}
+
+.loginHeader {
+    background-color: #0000;
+}
+
+#login {
+    background-color: #293241;
+}
