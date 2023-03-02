@@ -10,17 +10,34 @@
 }
 
 #main{
-    background-color: coral;
+    background-color: #111;
 }
 
 .fullpage{
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 #success{
     background-color: rgb(26, 25, 49);
     position: relative;
+    animation: successAnim 120ms;
+}
+
+body{
+    overflow: hidden;
+}
+
+@keyframes successAnim {
+    from{ 
+        transform: scale(1.14);
+/*        opacity: 0;*/
+    }
+    to {
+/*        opacity: 1;*/
+        transform: scale(1);
+    }
 }
 
 .videoWrapper {
@@ -39,7 +56,8 @@
 .successHeader {
     /* background-color: rgb(60, 60, 146); */
     position: relative;
-    background-color: #00304A;
+/*    background-color: #00304A;*/
+    background-color: #111111;
     height: 90px;
 }
 
@@ -213,7 +231,13 @@ opacity: 0.8;
 
 /* - - - - - - - - -  */
 
-.logoWrapper {
+.formWrapper>* {
+    color: #444;
+}
+
+.formWrapper>.unecText {
+}
+.formWrapper {
     display: flex;
     flex-direction: row;
 /*    background-color: #f333;*/
@@ -224,9 +248,57 @@ opacity: 0.8;
 }
 
 .loginHeader {
-    background-color: #0000;
+    background-color: #111111;
 }
 
 #login {
-    background-color: #293241;
+    background-color: #eeeeee;
+    position: relative;
+}
+
+.formWrapper form{
+    border-right: 2px solid #777;
+    padding-right: 40px;
+/*    position: relative;*/
+}
+
+.submitBtn {
+/*    background-color: #d6ffff;*/
+    background-color: #00304A;
+    color: #eee;
+    border: none;
+    padding: 4px;
+    margin-top: 17px;
+    width: 100%;
+}
+
+.laWrapper {
+    display: flex;
+    min-width: 15rem;
+    margin-bottom: 0.4rem;
+}
+
+/*.laWrapper.second {*/
+/*}*/
+
+.laWrapper input, .laWrapper button{
+    margin-left: auto;
+}
+
+.laWrapper{
+}
+
+.formWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formWrapper .unecLogo {
+    margin-left: 40px;
+}
+.formWrapper .unecText {
+    margin-left: 20px;
+    font-size: 1.1rem;
 }

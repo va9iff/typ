@@ -27,21 +27,25 @@
 
 
 
-				<div class="logoWrapper">
+				<div class="formWrapper">
 				<form action="action_page.php" method="post">
-				    <label for="uname"><b>Username</b></label>
-				    <input type="text" placeholder="Enter Username" name="uname" required>
-				    <br>
-				    <label for="psw"><b>Password</b></label>
-				    <input type="password" placeholder="Enter Password" name="psw" required>
-				    <br>
-				    <button type="submit" style="flex: 1">Login</button>
+					<div class="laWrapper">
+					    <label for="uname"><b>Username</b></label>
+					    <input type="text" placeholder="Enter Username" name="uname" required>
+					</div>
+				    <div class="laWrapper second">
+					    <label for="psw"><b>Password</b></label>
+					    <input type="password" placeholder="Enter Password" name="psw" required>
+				    </div>
+				    <div class="laWrapper">
+				    <button type="submit" style="flex: 1" class="submitBtn">Login</button>
+				    </div>
 				</form>
 
+					<img class="unecLogo" src="./UNEC.png" />
 					<div class="unecText">
 						Azərbaycan Dövlət <br> İqtisad Universiteti
 					</div>
-					<img class="unecLogo" src="./UNEC.png" />
 				</div>
 			</div>
 			<div id="success" class="fullpage">
@@ -67,7 +71,7 @@
 				</div>
 				<button id="enterButton">Giriş &gt;</button>
 				<div id="designBy">
-					designed by Vagif Valiyev, Alvin Aliyev, Azad Abdullayev
+					designed by Vagif Valiyev, Alvin Alizade, Azad Abdullayev
 				</div>
 			</div>
 		</div>
