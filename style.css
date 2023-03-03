@@ -22,7 +22,25 @@
 #success{
     background-color: rgb(26, 25, 49);
     position: relative;
-    animation: successAnim 120ms;
+/*    animation: successAnim 120ms;*/
+}
+
+.successHeader{
+    animation: succesHeaderAnim 1500ms;
+    animation-timing-function: cubic-bezier(0.030, 0.855, 0.235, 1.020); /* custom */
+
+
+}
+
+@keyframes succesHeaderAnim {
+    from{
+/*        width: 0;*/
+        padding-right: 90rem;
+    }
+    to{
+        padding-right: unset;
+/*        width: 100%;*/
+    }
 }
 
 body{
@@ -270,6 +288,7 @@ opacity: 0.8;
     padding: 4px;
     margin-top: 17px;
     width: 100%;
+    border-radius: 3px;
 }
 
 .laWrapper {
@@ -301,4 +320,70 @@ opacity: 0.8;
 .formWrapper .unecText {
     margin-left: 20px;
     font-size: 1.1rem;
+}
+
+
+/* - - - - - - - -  */
+
+#choose{
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+}
+
+#choices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+    flex: 1;
+display: flex;
+flex-direction: row ;
+}
+
+.choice {
+    background-color: #2b2d42;
+    transition: 200ms;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 200px;
+    height: 150px;
+    font-size: 1.2rem;
+    color: #eee;
+    display: flex;
+    text-align-last: center;
+    border: 4px solid #0000;
+
+/*    position: absolute;*/
+}
+
+.choices {
+    flex: 1;
+
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    box-shadow: 0 7px 12px #222a;
+    color: #2b2d42;
+    background-color: #eee;
+    border: 4px solid #2b2d42;
+}
+
+.choice:active {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 3px #7ff;
+}
+
+.goMain{
+/*    width: 70px;*/
+    margin-right: auto;
+    align-self: start;
+/*    justify-self: start;*/
+    margin: 10px;
+    padding: 14px;
+    border: none;
+    background-color: #dbcfff;
+    border-radius: 8px;
 }

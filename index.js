@@ -2,7 +2,8 @@ let query = (...args) => document.querySelector(...args)
 
 let pages = {
 	login: query('#login'),
-	success: query("#success")
+	success: query("#success"),
+	choose: query("#choose"),
 }
 
 let browse = pageTo => {
@@ -21,4 +22,12 @@ browse("login")
 query('.submitBtn').onclick = e => {
 	e.preventDefault()
 	browse("success")
+}
+
+query("#enterButton").onclick = e => {
+	browse("choose")
+}
+
+query(".goMain").onclick = e => {
+	browse("login")
 }
